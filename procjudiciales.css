@@ -1,0 +1,152 @@
+/*---------Código Procedimientos Judiciales---------*/
+/*============================================|
+|           view_1706 = tablaProcJudiciales                |
+|============================================*/
+
+/*Tablas*/
+#view_1706 .kn-table {
+  width: 100% !important; 
+  font-size: 16px;
+  margin: 0 auto;
+  border-radius: 10px !important;
+  overflow: hidden;
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+#view_1706 .kn-table-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F5F5F5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Quitar bordes en las esquinas*/
+#view_1706 thead th:first-child {
+  border-top-left-radius: 12px;
+  border-left: none;
+  border-top: none;
+}
+#view_1706 thead th:last-child{
+  border-top-right-radius: 12px;
+  border-right: none;
+  border-top: none;
+}
+#view_1706 tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+  border-left: none;
+  border-bottom: none;
+}
+#view_1706 tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+  border-right: none;
+  border-bottom: none;
+}
+/* Hover*/
+#view_1706 .kn-table tbody td {
+  transition: all 0.1s ease-in-out;
+}
+#view_1706 .kn-table tbody tr:hover td {
+  background-color: #ffffff !important;
+}
+
+/* Encabezados */
+#view_1706 table.kn-table thead th {
+  background-color: #453485 !important;
+  color: #F5F5F5 !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  pointer-events: none;
+  cursor: default;
+}
+/* Centra encabezados 
+#view_4039 thead th:nth-child(1) *,
+#view_4039 thead th:nth-child(2) *,
+#view_4039 thead th:nth-child(3) *,
+#view_4039 thead th:nth-child(4) *,
+#view_4039 thead th:nth-child(5) *,
+#view_4148 thead th:nth-child(1) *,
+#view_4148 thead th:nth-child(2) *,
+#view_4148 thead th:nth-child(3) *,
+#view_4148 thead th:nth-child(4) * {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}*/
+/* Celdas */
+#view_1706 .kn-table td {
+  background-color: #f3f3f3;
+  border: 0.5px solid #e3e3e3;
+}
+/* Text box */
+#view_1706 input[type="text"],
+#view_1706 select,
+#view_1706 textarea {
+  border: 1px solid #453485;
+  border-radius: 6px;
+}
+#view_1706 input:focus,
+#view_1706 select:focus,
+#view_1706 textarea:focus {
+  border: 1px solid #453485 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(56, 0, 134, 0.669);
+}
+/*Botón reiniciar*/
+#view_1706 .kn-clear-search.kn-button.is-link {
+  color: #453485 !important;
+  transition: 0.2s ease;
+}
+#view_1706 a.reset.kn-button.is-link {
+  color: #453485 !important;
+}
+/*Botón buscar*/
+#view_1706 .kn-button.search {
+  background-color: #453485;
+  color: #F5F5F5;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  transition: 0.2s ease;
+}
+#view_1706 .kn-button.search:hover {
+  background-color: #624bb4;
+  color: #F5F5F5;
+}
+/*Botón exportar y filtro*/
+#view_1706 .kn-export-button,
+#view_1706 .kn-export-button a,
+#view_1706 .kn-filters-nav,
+#view_1706 .kn-filters-nav a {
+  background-color: #453485 !important;
+  color: #F5F5F5 !important;
+  border: none !important;
+  border-radius: 0px;
+  transition: 0.2s ease;
+}
+#view_1706 .kn-export-button:hover,
+#view_1706 .kn-export-button a:hover,
+#view_1706 .kn-filters-nav:hover,
+#view_1706 .kn-filters-nav a:hover {
+background-color: #624bb4 !important;
+color: #F5F5F5 !important;
+}
+
+/*contenedorDeTabla */
+#view_1706 {
+  background: #ebebeb;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+  border: 1px solid #e8e8e8;
+}
+/*Títulos*/
+#view_1706 .view-header h2 {
+  color: #453485;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #453485;
+  display: inline-block;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
