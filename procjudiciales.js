@@ -1,6 +1,11 @@
-//efectoTabla view_1706
-$(document).on('knack-view-render.view_1706', function() {
-  $('#view_1706 tbody tr').each(function(index) {
+
+/*============================================|
+|       Efectos de tabla view_1706 y 1823     |
+|============================================*/
+
+// Efecto de filas en ambas tablas
+function efectoTabla(viewId) {
+  $('#' + viewId + ' tbody tr').each(function(index) {
     $(this)
       .css({
         opacity: 0,
@@ -10,23 +15,38 @@ $(document).on('knack-view-render.view_1706', function() {
       .animate({
         opacity: 1
       }, 300);
-    
-    setTimeout(() => {
 
+    setTimeout(() => {
       $(this).css({
         transform: 'translateY(0)',
         transition: 'all 0.3s ease'
       });
     }, index * 50);
   });
+}
+
+// Ejecutar efecto de tabla al renderizar cada vista
+$(document).on('knack-view-render.view_1706', function() {
+  efectoTabla('view_1706');
 });
 
-//view_1706
-function cargarView1706() {
-  const view = $('#view_1706');
-  //si todavía no existe, salir
+$(document).on('knack-view-render.view_1823', function() {
+  efectoTabla('view_1823');
+});
+
+
+/*============================================|
+|       Efecto de aparición de vistas         |
+|============================================*/
+
+// Función reutilizable para ambas vistas
+function cargarVista(viewId) {
+  const view = $('#' + viewId);
+
+  // Si todavía no existe, salir
   if (!view.length) return;
-  // efecto formulario
+
+  // Efecto de aparición
   view
     .css({
       opacity: 0,
@@ -37,19 +57,27 @@ function cargarView1706() {
     }, 400);
 
   setTimeout(function() {
-
     view.css({
       transform: 'translateY(0)',
       transition: 'all .4s ease'
     });
-  },50);
+  }, 50);
 }
 
-//eventoNormalKnack
+
+// Evento de renderizado view_1706
 $(document).on('knack-view-render.view_1706', function() {
-  cargarView4147();
+  cargarVista('view_1706');
 });
-//siElScriptCargoDespués
-$(function(){
-  cargarView4147();
+
+// Evento de renderizado view_1823
+$(document).on('knack-view-render.view_1823', function() {
+  cargarVista('view_1823');
+});
+
+
+// Si el script carga después de las vistas
+$(function() {
+  cargarVista('view_1706');
+  cargarVista('view_1823');
 });
