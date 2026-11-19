@@ -7,21 +7,34 @@
 /* Tablas */
 #view_1706 .kn-table,
 #view_1823 .kn-table {
-  width: 100% !important;
+  width: max-content !important;
+  min-width: 100% !important;
   font-size: 16px;
   margin: 0 auto;
   border-radius: 10px !important;
-  overflow: hidden;
   border-collapse: separate !important;
   border-spacing: 0;
 }
 
+/* Contenedor de tabla */
 #view_1706 .kn-table-wrapper,
 #view_1823 .kn-table-wrapper {
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100%;
+  width: 100%;
   background: #F5F5F5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mantener ancho de columnas */
+#view_1706 .kn-table th,
+#view_1706 .kn-table td,
+#view_1823 .kn-table th,
+#view_1823 .kn-table td {
+  white-space: nowrap !important;
 }
 
 /* Quitar bordes en las esquinas */
